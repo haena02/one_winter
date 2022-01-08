@@ -11,6 +11,12 @@ N은 10만 이하의 자연수이다.
 arr의 각 수는 0이상 100이하이고 N은 1000이하이다.
 */
 
+/*문제3
+N이 제곱수이면 1을 반환하고 제곱수가 아니면 0일 반환하는 함수 func3(int N)을 작성하라. N은 10억 이하의 자연수이다.
+*/
+
+//문제4
+//N 이하의 수 중에서 가장 큰 2의 거듭제곱수를 반환하는 func4(int N)을 작성하라. N은 10억 이하의 자연수이다.
 
 #include <iostream>
 
@@ -44,6 +50,29 @@ void func2(int arr[], int N) {
 
 }
 
+void func3(int N) {
+	for (int i = 0; i * i <= N; i++) {
+		if (i * i == N) {
+			cout << 1;
+			return;
+		}
+	}
+	cout << 0;
+
+}
+
+void func4(int N) {
+
+	int num=2;
+
+	do {
+		num *= 2;
+
+	} while (num <= N);
+
+	cout << num/2<<endl;
+}
+
 int main() {
 
 	/*
@@ -52,11 +81,19 @@ int main() {
 	func1(input);
 	*/
 
-	int arr[3] = { 1,52,48 };
+	/*int arr[3] = { 1,52,48 };
 	func2(arr, 3);
 	int arr1[2] = { 50,42 };
 	func2(arr1, 2);
 	int arr2[4] = { 4,13,63,87 };
-	func2(arr2, 4);
+	func2(arr2, 4);*/
+
+	//func3(9);
+	//func3(693953651);
+	//func3(756580036);
+
+	func4(5);
+	func4(97615282);
+	func4(1024);
 
 }
