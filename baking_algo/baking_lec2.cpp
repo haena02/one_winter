@@ -38,6 +38,7 @@ void func1(int N) {
 
 void func2(int arr[], int N) {
 
+	/* 시간복잡도 O(N^2)
 	for (int i = 0; i < N; i++) {
 		for (int j = i + 1; j < N; j++) {
 			if (arr[i] + arr[j] == 100) {
@@ -46,7 +47,18 @@ void func2(int arr[], int N) {
 			}
 		}
 	}
-	cout << 0;
+	cout << 0;*/
+
+	int occur[101] = {};
+	for (int i = 0; i < N; i++) {
+		if (occur[100 - arr[i]] ) {
+			cout << 1;
+			return;
+
+		}
+		occur[arr[i]] = 1;
+
+	}
 
 }
 

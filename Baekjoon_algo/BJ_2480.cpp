@@ -1,3 +1,4 @@
+//주사위 세개
 #include <iostream>
 
 using namespace std;
@@ -16,14 +17,14 @@ int main() {
 	else if (a == b)
 		cout << 1000 + (a * 100);
 	else if (b == c)
-		cout << 1000 + (a * 100);
+		cout << 1000 + (b* 100);
 	else if (a == c)
 		cout << 1000 + (a * 100);
 	else {
-		if (a >= b && a >= c) {
+		if (a > b && a > c) {
 			cout << a * 100;
 		}
-		else if (b >= a && b >= c) {
+		else if (b > a && b > c) {
 			cout << b * 100;
 		}
 		else {
